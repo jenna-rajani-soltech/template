@@ -1,7 +1,7 @@
 {
-  "name": "tiy-sep-2016-template",
+  "name": "jjrajani",
   "version": "1.0.0",
-  "description": "This is a basic starter template.",
+  "description": "This is my first basic starter template.",
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-register || true",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tiy-atl-js-sep-2016/template.git"
+    "url": "git+https://github.com/jjrajani/template.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "humdrum",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tiy-atl-js-sep-2016/template/issues"
+    "url": "https://github.com/jjrajani/template/issues"
   },
-  "homepage": "https://github.com/tiy-atl-js-sep-2016/template#readme",
+  "homepage": "https://github.com/jjrajani/template#readme",
   "devDependencies": {
     "babel-preset-es2015": "6.6.0",
     "babel-preset-react": "6.5.0",

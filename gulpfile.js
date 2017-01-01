@@ -25,11 +25,20 @@ var handleError = function(err) {
   this.emit('end');
 }
 
+var handleSASSError = function(err) {
+  notify.onError("SASS")(err);
+  console.log(chalk.white.bgRed(' <SASS error> ------------------------ '));
+  console.log(chalk.white(err.message));
+  console.log(chalk.white.bgRed(' <SASS /error> ----------------------- '));
+  this.emit('end');
+}
+
 // Converts SASS into CSS
 gulp.task('sass', () => {
-  gulp.src('./src/sass/main.scss')
+  gulp.src('./src/frontend/sass/main.scss')
     .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(sass({ importer: sassImport() }).on('error', handleError))
+    .pipe(sass().on('error', handleSASSError))
+    // .pipe(sass({ importer: sassImport() }).on('error', handleSASSError))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./app/css'));
 });
@@ -49,7 +58,7 @@ gulp.task('browserify', () => {
 
 // Watches our .scss & .js files for change
 gulp.task('watch', () => {
-  watch('./src/sass/**/*.scss', () => { gulp.start('sass'); });
+  watch('./src/frontend/sass/**/*.scss', () => { gulp.start('sass'); });
   watch(['./src/js/**/*.js', './package.json'], () => { gulp.start('browserify'); });
   watch('./app/**/**', () => { browserSync.reload(); });
 });
@@ -68,4 +77,4 @@ gulp.task('server', function(done) {
 gulp.task('build', ['sass', 'browserify']);
 
 // Starts the development process
-gulp.task('start', ['build', 'watch', 'server']);
+gulp.task('start', ['build', 'sass', 'watch', 'server']);
