@@ -1,5 +1,5 @@
 {
-  "name": "jjrajani",
+  "name": "jenna-rajani-soltech",
   "version": "1.0.0",
   "description": "This is my first basic starter template.",
   "main": "index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jjrajani/template.git"
+    "url": "git+https://github.com/jenna-rajani-soltech/template.git"
   },
   "keywords": [],
-  "author": "humdrum",
+  "author": "jenna-rajani-soltech",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jjrajani/template/issues"
+    "url": "https://github.com/jenna-rajani-soltech./template/issues"
   },
-  "homepage": "https://github.com/jjrajani/template#readme",
+  "homepage": "https://github.com/jenna-rajani-soltech./template#readme",
   "devDependencies": {
     "babel-preset-es2015": "6.6.0",
     "babel-preset-react": "6.5.0",
